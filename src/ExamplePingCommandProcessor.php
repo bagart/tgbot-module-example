@@ -74,7 +74,7 @@ class ExamplePingCommandProcessor implements TgModuleProcessorContract
         // Demo consumer of module settings: the reply text is configurable per
         // scope via tg_module_enablements.module_settings ('ping_reply' key).
         // Only available inside the Laravel app — the pure-PHP path keeps the default.
-        if ($botConfig->botId !== null && function_exists('app')) {
+        if (function_exists('app')) {
             try {
                 $settings = app(\BAGArt\TelegramBot\Contracts\Modules\ModuleSettingsContract::class)
                     ->settingsFor('example', $botConfig->botId, (int)$dto->chat->id);

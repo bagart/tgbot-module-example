@@ -27,6 +27,9 @@
             "BAGArt\\TelegramBotExample\\": "src/"
         }
     },
+    "scripts": {
+        "test": "@php ../../../vendor/bin/pest"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
